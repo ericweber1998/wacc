@@ -1,0 +1,12 @@
+equity = float(input("\nTO CALCULATE YOUR WEIGHTED AVERAGE COST OF CAPITAL, ENTER THE FOLLOWING INFO\n"
+                     "\nEquity: "))
+debt = float(input("Debt: "))
+re = float(input("Cost of Equity: "))
+rd = float(input("Cost of Debt: "))
+t = float(input("Tax: "))
+equity_portion = (equity / (debt + equity)) * re
+debt_portion = (debt / (debt + equity)) * rd * (1 - t)
+wacc = equity_portion + debt_portion
+print(f"Equity Portion = {equity_portion * 100}%")
+print(f"Debt Portion = {debt_portion * 100}%")
+print(f"Weight Average Cost of Capital = {wacc * 100}%")
